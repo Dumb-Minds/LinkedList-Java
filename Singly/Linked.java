@@ -26,7 +26,11 @@ public class Linked{
 		else{
 			Node p = headNode;
 			while(p.link.data != a){
-				if(p == null){
+				if(p.link == null){
+					if(p.link.data == a){
+						tailNode = p;
+						return true;
+					}
 					System.out.println("Not found");
 					return ;
 				}
